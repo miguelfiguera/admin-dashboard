@@ -7,8 +7,141 @@
     --my-dark-blue:#1e3a8a ;
     --my-white:#dbeafe ;
     --my-gray-blue: #bfdbfe;
+    --my-simple-gray:#d1d5db;
 }
 
 *{
     box-sizing: border-box;
 }
+
+body{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-auto-rows: minmax(75px,auto);
+    
+}
+
+/*left panel*/
+
+div.panel.left{
+    font-family: var(--font-roboto,sans-serif);
+    background-color: var(--my-blue,blue);
+    color: var(--my-white,white);
+    grid-row: 1/10;
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(25px,auto);
+}
+
+button.primary, button.secundary, button.header{
+    color: var(--my-white,white);
+    font-family: var(--font-roboto,sans-serif);
+    background-color: var(--my-blue,blue);
+    border: none;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+h3{
+    grid-column: 1/4;
+    grid-row: 1/2;
+    text-align: center;
+    margin-top: 20%;
+    font-weight: bolder;
+}
+
+div.primary {
+    grid-column: 2/3;
+    grid-row:2/5;
+    display: flex;
+    flex-flow: column;
+    flex-grow: 0;
+    justify-content: space-evenly;
+}
+
+div.secundary{
+    grid-column: 2/3;
+    grid-row: 6/8;
+    display: flex;
+    flex-flow: column;
+    flex-grow: 0;
+    justify-content: space-evenly;
+}
+
+button.primary, button.secundary {
+    text-align: left;
+}
+
+
+/*header*/
+
+header{
+    grid-column: 3/10;
+    grid-row: 1/3;
+    box-shadow: -5px 5px 5px  gray;
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 0;
+    /*display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr 1fr;*/
+}
+
+div.input{
+    align-items: center;
+    width: 66%;
+    height: 50%;
+    order: 1;
+    display: flex;
+    justify-content: center;
+}
+
+div.glass{
+    width: 10%;
+    order: 1;
+    height:10%;
+}
+
+input.searcher{
+    border-radius: 25px;
+    width: 70%;
+    height: 40%;
+    background-color: var(--my-simple-gray,gray);
+    border-style: hidden;
+    order: 2;
+}
+
+div.miniature {
+    width: 33%;
+    height: 50%;
+    border: #1d4ed8;
+    order: 2;
+}
+
+div.name.card{
+    width: 66%;
+    height: 50%;
+    border: var(--my-simple-gray);
+    order: 3;
+}
+
+
+div.button.container{
+    width: 33%;
+    height: 50%;
+    order: 4;
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 0;
+    align-items: center;
+}
+
+button.header {
+    width: 30%;
+    height: 60%;
+    font-weight: bold;
+}
+
+/*main content div*/
+
