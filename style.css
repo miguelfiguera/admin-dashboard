@@ -18,8 +18,8 @@
 
 body{
     display: grid;
-    grid-template-columns: repeat(10,1fr);
-    grid-auto-rows: minmax(75px,auto);    
+    grid-template-columns: repeat(11,1fr);
+    grid-auto-rows: minmax(50px,75px);   
 }
 
 /*left panel*/
@@ -28,11 +28,11 @@ div.panel.left{
     font-family: var(--font-roboto,sans-serif);
     background-color: var(--my-blue,blue);
     color: var(--my-dark-zinc,white);
-    grid-row: 1/10;
+    grid-row: 1/11;
     grid-column: 1/3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 1fr;
+    grid-template-rows: repeat(11,75px);
 }   
 
 div.svg.primary{
@@ -118,9 +118,6 @@ header{
     display: flex;
     flex-flow: row wrap;
     flex-grow: 0;
-    /*display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: 1fr 1fr;*/
 }
 
 div.input{
@@ -155,15 +152,64 @@ input.searcher{
 div.miniature {
     width: 33%;
     height: 50%;
-    border: #1d4ed8;
     order: 2;
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 0;
+    align-content: flex-start;
+    justify-content: center;
 }
+
+img.miniature{
+    width: 30%;
+    height: 50%;
+    align-content: center;
+    margin-top: 13px;
+}
+
+div.miniature > p{
+    width: 66%;
+    height: 30%;
+    font-family: var(--font-roboto)
+}
+
+
 
 div.name.card{
     width: 66%;
-    height: 50%;
+    height: clamp(75px,50%,115px);
     border: var(--my-simple-gray);
     order: 3;
+    display: flex;
+    flex-grow: 0;
+    flex-flow: column wrap;
+    font-family: var(--font-grotesk);
+    align-content: flex-start;
+    justify-content: center;
+}
+
+img.name.card {
+    width: 25%;
+    height: 100%;
+    order: 1;
+    margin-bottom: 10px;
+}
+p.name{
+    height:70%;
+    width: 60%;
+    order: 3;
+    margin: 0px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+
+p.greetings{
+    font-size: smaller;
+    height: 20%;
+    width: 25%;
+    order: 2;
+    margin: 0px;
 }
 
 
@@ -184,4 +230,112 @@ button.header {
 }
 
 /*main content div*/
+
+div.main.content {
+    grid-column: 3/12;
+    grid-row: 3/11;
+    gap:7px;
+    position: bottom;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,fr);
+    gap: 10px;
+    background-color: #e9eee6;
+}
+
+div#projects{
+    grid-column: 1/-6;
+    grid-row: 1/12;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+
+}
+
+div#infopanel{
+    grid-row: 1/12;
+    grid-column: -6/-2;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(8,1fr);
+    border-radius: 25px;
+}
+
+h6 {
+    grid-column: 2/5;
+    text-align: left;
+    font-family: var(--font-roboto);
+    font-size: medium;
+    margin: 0;
+    margin-top: 20px;
+    height: 50px;
+}
+
+div.announcements{
+    grid-column: 2/6;
+    grid-row: 2/5;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+}
+
+p.announce {
+    font-family: var(--font-roboto);
+    font-weight: bold;
+    font-size: small;
+    margin-top: 5px;
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+p.announcement.text{
+    font-size: 14px;
+    font-family: var(--font-roboto);
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-bottom: 1px grey;
+
+}
+
+
+h6.two{
+    grid-row:5/6
+}
+
+div.trending {
+    grid-column: 2/6;
+    grid-row: 6/9
+}
+div.account{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    flex-grow: 0;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: var(--font-grotesk);
+    border: 1px solid grey;
+    background-color: white;
+}
+
+img.account{
+    width: 45%;
+    height: 45%;
+    order: 1;
+}
+
+p.account{
+    font-size: smaller;
+    font-weight: bold;
+    text-align: left;
+    width: 75%;
+    height: 20px;
+    order: 2;
+    margin: 0px;
+}
+
 
