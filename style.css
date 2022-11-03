@@ -32,7 +32,7 @@ div.panel.left{
     grid-column: 1/3;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(11,75px);
+    grid-template-rows: repeat(8,1fr);
 }   
 
 div.svg.primary{
@@ -234,35 +234,92 @@ button.header {
 div.main.content {
     grid-column: 3/12;
     grid-row: 3/11;
-    gap:7px;
     position: bottom;
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(12,fr);
-    gap: 10px;
+    grid-template-rows: repeat(7,fr);
+    gap: 20px;
     background-color: #e9eee6;
 }
 
 div#projects{
-    grid-column: 1/-6;
+    grid-column: 1/9;
     grid-row: 1/12;
     display: grid;
-    grid-template-columns: repeat(8,1fr);
-    grid-template-rows: repeat(8,1fr);
-
+    grid-template-columns: 20px repeat(3,1fr) 20px repeat(3,1fr) ;
+    grid-template-rows: repeat(4,50px) 25px repeat(3,50px) 25px repeat(3,50px) 10px;
+    font-family: var(--font-grotesk);
 }
+
+p.myprojects{
+    grid-column: 2/4;
+    font-size: large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+div.projects {    
+    font-family: var(--font-grotesk);
+    background-color: white;
+}
+
+div.projects.info1,div.projects.info2,div.projects.info3 {
+    grid-column: 2/5;
+    border-left: 3px solid #fb923c;
+    border-radius: 25px;
+}
+
+div.projects.info1,div.projects.info4{
+    grid-row: 2/5;
+}
+
+div.projects.info2,div.projects.info5{
+    grid-row: 6/9;
+}
+
+div.projects.info3,div.projects.info6{
+    grid-row: 10/13;
+}
+
+
+div.projects.info4,div.projects.info5,div.projects.info6 {
+    grid-column: 6/9;
+    border-left: 3px solid #fb923c;
+    border-radius: 25px;
+}
+
+div.projects.info5{
+    height: ;
+}
+
+
+p.main.title{
+    font-weight: bolder;
+    font-size: large;
+}
+
+p.unimportant.text{
+    font-size: small;
+}
+
+
+
+
+
+
+
 
 div#infopanel{
     grid-row: 1/12;
-    grid-column: -6/-2;
+    grid-column: 9/12;
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(8,1fr);
+    grid-template-rows: repeat(7,75px);
     border-radius: 25px;
 }
 
 h6 {
-    grid-column: 2/5;
+    grid-column: 1/6;
     text-align: left;
     font-family: var(--font-roboto);
     font-size: medium;
@@ -272,7 +329,7 @@ h6 {
 }
 
 div.announcements{
-    grid-column: 2/6;
+    grid-column: 1/6;
     grid-row: 2/5;
     background-color: white;
     border-radius: 25px;
@@ -282,32 +339,33 @@ div.announcements{
 }
 
 p.announce {
-    font-family: var(--font-roboto);
+    font-family: var(--font-grotesk);
     font-weight: bold;
-    font-size: small;
+    font-size: medium;
     margin-top: 5px;
     margin-bottom: 0;
     margin-left: 10px;
 }
 
 p.announcement.text{
+    font-family: var(--font-roboto);
     font-size: 14px;
     font-family: var(--font-roboto);
     margin-bottom: 5px;
     margin-top: 5px;
     margin-left: 10px;
     border-bottom: 1px grey;
+    color: var(--my-dark-zinc);
 
 }
-
 
 h6.two{
     grid-row:5/6
 }
 
 div.trending {
-    grid-column: 2/6;
-    grid-row: 6/9
+    grid-column: 1/6;
+    grid-row: 6/7
 }
 div.account{
     height: 50px;
